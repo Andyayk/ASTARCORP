@@ -14,7 +14,7 @@ a img {
     border-width: 0;
     display:block;
     height: 59px;
-    width: 272px;
+    width: 72px;
     margin-bottom: 0px;
 }
 .page {
@@ -181,6 +181,8 @@ p a:hover {
 	padding:39px 13px 0 20px;
 	position:relative;
 	width:130px;
+    top: 0px;
+    left: 6px;
 }
 .body .home .sidebar ul li:first-child span {
 	border-bottom:2px solid #ff8b00;

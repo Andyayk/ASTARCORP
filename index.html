@@ -5,11 +5,46 @@
 	<meta charset="UTF-8">
 	<title>ASTAR - Learning Platform For You</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	   <style type="text/css">
+@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+
+#feedControl {
+margin-top : auto;
+margin-left: auto;
+margin-right: auto;
+width : 280px;
+font-size: 16px;
+color: #000000;
+}
+
+</style>
+
+<script src="https://www.google.com/jsapi/" type="text/javascript"></script>
+<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
+type="text/javascript"></script>
+
+<script type="text/javascript">
+function showControl() {
+var feeds = [
+{title:'CNN',
+url:'http://rss.cnn.com/rss/edition_world.rss'},
+{title:'NY Times',
+url:'http://feeds.nytimes.com/nyt/rss/World'},
+{title:'Reuters',
+url:'http://feeds.reuters.com/Reuters/worldNews'}];
+
+new GFdynamicFeedControl(feeds, 'feedControl',
+{numResults : 6, stacked : true,
+title: "Market News"});
+}
+google.load("feeds", "1");
+google.setOnLoadCallback(showControl);
+</script>
 </head>
 <body>
 	<div class="page">
 		<div class="header">
-			<a href="index.html" id="logo"><img src="images/logo.png" alt="logo"></a>
+			<a href="index.html" id="logo"><img src="images/logo1.png" alt="logo"></a>
 			<ul class="navigation">
 				<li class="selected">
 					<a href="index.html">Home</a>
@@ -28,6 +63,9 @@
 				</li>
 				<li>
 					<a href="http://astartalk.forumotion.com/">Forum</a>
+				</li>
+				<li>
+					<a href="glossary.html">Glossary</a>
 				</li>
 			</ul>
 		</div>
@@ -62,40 +100,8 @@
 				<div class="sidebar">
 					<ul>
 						<li>
-							<span>Jun 01</span>
-							<h2>bla bla bla bla bla bla</h2>
-							<a href="blog.html"><img src="images/singing-kids.jpg" alt=""></a>
-							<p>
-								INPUT TEXT HERE <a href="blog.html" class="more">(more)</a>
-							</p>
-						</li>
-						<li>
-							<span>Jun 02</span>
-							<h2>BLA BLA BLA</h2>
-							<p>
-								input text here.<a href="blog.html" class="more">(more)</a>
-							</p>
-						</li>
-						<li>
-							<span>Jun 03</span> <a href="blog.html"><img src="images/singer.jpg" alt=""></a>
-							<h2>bla bla bla</h2>
-							<p>
-								Input here <a href="blog.html" class="more">(more)</a>
-							</p>
-						</li>
-						<li>
-							<span>Jun 04</span> <a href="blog.html"><img src="images/violin-lesson.jpg" alt=""></a>
-							<h2>Bla bla bla</h2>
-							<p>
-								Input text here <a href="blog.html" class="more">(more)</a>
-							</p>
-						</li>
-						<li>
-							<span>Jun 07</span>
-							<h2>BLA BLA</h2>
-							<p>
-								Input here<a href="blog.html" class="more">(more)</a>
-							</p>
+							<span>News</span>
+							<div id="feedControl">Loading...</div>
 						</li>
 					</ul>
 					<a href="blog.html">more posts</a>
