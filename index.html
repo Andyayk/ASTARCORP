@@ -4,41 +4,39 @@
 	<meta charset="UTF-8">
 	<title>ASTAR - Learning Platform for You</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	   <style type="text/css">
-@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
+	<style type="text/css">
+ 		@import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
 
-#feedControl {
-margin-top : auto;
-margin-left: auto;
-margin-right: auto;
-width : 280px;
-font-size: 16px;
-color: #000000;
-}
+		#feedControl {
+		margin-top : auto;
+		margin-left: auto;
+		margin-right: auto;
+		width : 280px;
+		font-size: 16px;
+		color: #000000;
+		}
+	</style>
 
-</style>
+	<script src="https://www.google.com/jsapi/" type="text/javascript"></script>
+	<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"type="text/javascript"></script>
 
-<script src="https://www.google.com/jsapi/" type="text/javascript"></script>
-<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
-type="text/javascript"></script>
+	<script type="text/javascript">
+	function showControl() {
+	var feeds = [
+	{title:'MarketWatch',
+	url:'http://feeds.marketwatch.com/marketwatch/marketpulse/'},
+	{title:'CNBC',
+	url:'http://www.cnbc.com/id/100003241/device/rss/rss.html'},
+	{title:'Reuters',
+	url:'http://feeds.reuters.com/news/economy'}];
 
-<script type="text/javascript">
-function showControl() {
-var feeds = [
-{title:'MarketWatch',
-url:'http://feeds.marketwatch.com/marketwatch/marketpulse/'},
-{title:'CNBC',
-url:'http://www.cnbc.com/id/100003241/device/rss/rss.html'},
-{title:'Reuters',
-url:'http://feeds.reuters.com/news/economy'}];
-
-new GFdynamicFeedControl(feeds, 'feedControl',
-{numResults : 6, stacked : true,
-title: "Market News"});
-}
-google.load("feeds", "1");
-google.setOnLoadCallback(showControl);
-</script>
+	new GFdynamicFeedControl(feeds, 'feedControl',
+	{numResults : 6, stacked : true,
+	title: "Market News"});
+	}
+	google.load("feeds", "1");
+	google.setOnLoadCallback(showControl);
+	</script>
 </head>
 <body>
 	<div class="page">
@@ -55,10 +53,10 @@ google.setOnLoadCallback(showControl);
 					<a href="glossary.html">Glossary</a>
 				</li>
 				<li>
-					<a href="https://apps.facebook.com/tradingwithfriends/"" target="_blank">Trading With Friends</a>
+					<a href="https://apps.facebook.com/tradingwithfriends/" target="_blank">Trading With Friends</a>
 				</li>
 				<li>
-					<a href="http://astartalk.forumotion.com/">Forum</a>
+					<a href="http://astartalk.forumotion.com/" target="_blank">Forum</a>
 				</li>
 				<li>
 					<a href="FAQs.html">FAQs</a>
