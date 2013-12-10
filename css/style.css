@@ -1132,7 +1132,7 @@ p a:hover {
 }
 .body .programs .content div.section div h4, .body .violin .content div.section div h4, .body .saxophone .content div.section div h4, .body .guitar .content div.section div h4, .body .drums .content div.section div h4, .body .voice-lesson .content div.section div h4 {
 	color:#6B7073;
-	font-size:14px;
+	font-size:16px;
 	font-weight:700;
 	letter-spacing:.05em;
 	line-height:24px;
@@ -1142,7 +1142,7 @@ p a:hover {
 }
 .body .programs .content div.section div span, .body .programs .content div.section div p, .body .violin .content div.section div span, .body .violin .content div.section div p, .body .saxophone .content div.section div span, .body .saxophone .content div.section div p, .body .guitar .content div.section div span, .body .guitar .content div.section div p, .body .drums .content div.section div span, .body .drums .content div.section div p, .body .voice-lesson .content div.section div span, .body .voice-lesson .content div.section div p, .body .blog-single div:first-child div p {
 	color:#6B7073;
-	font-size:14px;
+	font-size:16px;
 	letter-spacing:.05em;
 	line-height:24px;
 	margin:0;
@@ -1164,7 +1164,7 @@ p a:hover {
 }
 .body .programs .content div h4, .body .violin .content div h4, .body .saxophone .content div h4, .body .guitar .content div h4, .body .drums .content div h4, .body .voice-lesson .content div h4 {
 	color:#6B7073;
-	font-size:14px;
+	font-size:16px;
 	font-weight:700;
 	letter-spacing:.05em;
 	line-height:24px;
@@ -1188,7 +1188,7 @@ p a:hover {
 .body .programs .content div ul li span, .body .violin .content div ul li span, .body .saxophone .content div ul li span, .body .guitar .content div ul li span, .body .drums .content div ul li span, .body .voice-lesson .content div ul li span {
 	color:#6B7073;
 	display:block;
-	font-size:14px;
+	font-size:16px;
 	letter-spacing:.05em;
 	line-height:24px;
 	margin:0;
@@ -1206,7 +1206,7 @@ p a:hover {
 }
 .body .violin .content div:first-child div h3, .body .saxophone .content div:first-child div h3, .body .voice-lesson .content div:first-child div h3 {
 	color:#444;
-	font-size:14px;
+	font-size:16px;
 	font-weight:400;
 	letter-spacing:.05em;
 	line-height:24px;
@@ -1224,7 +1224,7 @@ p a:hover {
 }
 .body .violin .content div:first-child div p, .body .saxophone .content div:first-child div p, .body .voice-lesson .content div:first-child div p {
 	color:#6B7073;
-	font-size:14px;
+	font-size:16px;
 	letter-spacing:.05em;
 	line-height:24px;
 	margin:0 0 24px;
@@ -1263,7 +1263,7 @@ p a:hover {
 	border-bottom:2px solid #FF8B00;
 	color:#6B7073;
 	display:inline;
-	font-size:14px;
+	font-size:16px;
 	left:0;
 	letter-spacing:.05em;
 	line-height:24px;
@@ -1279,7 +1279,7 @@ p a:hover {
 }
 .body .blog .section:first-child div p, .body .blog .section:first-child div div p {
 	color:#6B7073;
-	font-size:14px;
+	font-size:16px;
 	letter-spacing:.05em;
 	line-height:24px;
 	margin:0;
@@ -1288,7 +1288,7 @@ p a:hover {
 .body .blog .section:first-child div div > a, .body .blog .section:first-child div > a {
 	color:#6b7073;
 	text-decoration:none;
-	font-size:14px;
+	font-size:16px;
 	line-height:24px;
 	letter-spacing:0.05em;
 }
