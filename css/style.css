@@ -12,8 +12,8 @@ a img {
     border-color: inherit;
     border-width: 0;
     display:block;
-    height: 59px;
-    width: 72px;
+    height: 61px;
+    width: 74px;
     margin-bottom: 0px;
 }
 .page {
@@ -34,7 +34,7 @@ p a:hover {
 	display:inline-block;
 	float:left;
 	height:4px;
-	margin:0;
+	margin:auto;
 	width:207px;
 }
 .header ul.navigation {
