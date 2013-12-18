@@ -1,3 +1,95 @@
+<?php
+		
+		// @NEW Set default values
+		$name = '';
+		$surname = '';
+		$email = '';
+		$message = '';
+		
+		// @NEW set default error messages
+		$nameError = '';
+		$surnameError = '';
+		$emailError = '';
+		$messgaeError = '';
+		
+		// Set default message
+		$message = '';
+		
+		// Set array of errors
+		$errors = array();
+		
+		// Set default that there is no errors
+		$noErrors = true;
+		
+		// haveErrors is the opposite of noErrors
+		$haveErrors = !$noErrors;
+		
+		// use require_once to include the validations/registerformresult.php
+		require_once('validations/faqresult.php');
+		
+		// for successful POST
+		if ($noErrors && $userArriveBySubmittingAForm) {
+				
+				// $newTitle for successful
+				$newTitle = 'Submission Successfully!!';
+				
+				// $h1Title for Thank you for registering with us!
+				$h1Title = 'Thank you for your contributions!';
+				
+				$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+				
+				$message = $message . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
+				$message = $message . "\t\t" . 'Surname : ' . $surname . ' <br />' . "\n";
+				$message = $message . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
+				$message = $message . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
+
+				$message = $message . "\t\t" . '<ol>' . "\n"
+										
+				// for error validation
+		} else if ($haveErrors && $userArriveBySubmittingAForm) {
+				// $newTitle for Registration fail!
+				$newTitle = 'Error! Validation failed!!';
+				
+				// $h1Title for Registration fail!
+				$h1Title = 'Fail!';
+			
+				$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+				$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
+				
+				$message = $message . "\t\t" . '<ol>' . "\n";
+				
+				
+				
+				foreach ($errors as $key=>$errorMessage) {
+				$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+				
+				if ($key == 'name') {
+						$nameError = $errorMessage;
+				}
+				if ($key == 'surname') {
+						$surnameError = $errorMessage;
+				}
+				if ($key == 'email') {
+						$emailError = $errorMessage;
+				}
+				if ($key == 'message') {
+						$messageError = $errorMessage;
+				}
+				
+				}
+				
+				$message = $message . "\t\t" . '</ol>' . "\n";
+				
+				// for displaying form
+		} else if ($userArriveByClickingOrDirectlyTypeURL) { // we put the original form inside the $message variable
+				$newTitle = 'Registration';
+				
+				$h1Title = 'Welcome to Trading with Friends';
+				
+				$message = '';
+		}
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
