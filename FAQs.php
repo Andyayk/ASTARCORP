@@ -119,7 +119,7 @@
 					<a href="http://astartalk.forumotion.com/" target="_blank">Forum</a>
 				</li>
 			    <li class="selected">
-					<a href="FAQs.html">FAQs</a>
+					<a href="FAQs.php">FAQs</a>
 				</li>
 			</ul>
 		</div>
