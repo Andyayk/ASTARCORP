@@ -88,7 +88,6 @@
 				<div class="content">
 					<div class="featured">
 						<div>
-							<a href="javascript:slidelink()">
                             <img src="images/singtelchart.jpg" name="slide" border="0" width="600" height="400" /></a>
 							<script type="text/javascript">
 							var step=1
@@ -98,11 +97,11 @@
 								return
 								document.images.slide.src=eval("image"+step+".src")
 								whichimage=step
-								if (step<3)
+								if (step<4)
 									step++
 								else
 									step=1
-									setTimeout("slideit()",4000)
+									setTimeout("slideit()",10000)
 							}
 							slideit()
 							function slidelink(){
@@ -112,6 +111,8 @@
 								window.location="link2.htm"
 							else if (whichimage==3)
 								window.location="link3.htm"
+							else if (whichimage==4)
+								window.location="link4.htm"
 							}
 							</script>
 						</div>
