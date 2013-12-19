@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script type="text/javascript">
-<!--
-var image1=new Image()
-image1.src="images/singtelchart.jpg"
-var image2=new Image()
-image2.src="images/singtelratio.jpg"
-var image3=new Image()
-image3.src="images/singtelsummary.jpg"
-//-->
-</script>
 	<meta charset="UTF-8">
 	<title>Trading With Friends - Learning Platform for You - Home</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
@@ -47,11 +37,22 @@ image3.src="images/singtelsummary.jpg"
 	google.load("feeds", "1");
 	google.setOnLoadCallback(showControl);
 	</script>
+	
+	<script type="text/javascript">
+		var image1=new Image()
+		image1.src="images/singtelchart.jpg" //Put a colourful picture that says PLAY TRADING WITH FRIENDS!! 
+		var image2=new Image()
+		image2.src="images/singtelratio.jpg" //Equities List Photo
+		var image3=new Image()
+		image3.src="images/halloffame.jpg" //Hall of fame photo
+		var image4=new Image()
+		image4.src="images/singtelsummary.jpg" //Visit ... Now!! Free to play!!	
+	</script>
 </head>
 <body>
 	<div class="page">
 		<div class="header">
-			<a href="index.html" id="logo"><img src="images/logo1.png" alt="logo"></a>
+			<a href="index.html" id="logo"><img src="images/logo.png" alt="logo"></a>
 			<ul class="navigation">
 				<li class="selected">
 					<a href="index.html">Home</a>
@@ -72,61 +73,55 @@ image3.src="images/singtelsummary.jpg"
 					<a href="FAQs.php">FAQs</a>
 				</li>
 			</ul>
-			
 		</div>
 
 		<div class="search">
-<div>
-<form action="search.php" method="get">
-<input type="text" name="query" id="query" size="40" value="">
-<input type="submit" value="Search">
-<input type="hidden" name="search" value="1">
-</form>
-</div>
+		<form action="search.php" method="get">
+			<input type="text" name="query" id="query" size="40" value="">
+			<input type="submit" value="Search">
+			<input type="hidden" name="search" value="1">
+		</form>
+		</div>
 		
 		<div class="body">
 			<div class="home">
 				<div class="content">
 					<div class="featured">
-						<div><br /><p>trading with friends</p>
-								<a href="javascript:slidelink()">
-                                <img src="images/singtelchart.jpg" name="slide" border="0" width="600" height="400" /></a>
-<script type="text/javascript">
-<!--
-var step=1
-var whichimage=1
-function slideit(){
-if (!document.images)
-return
-document.images.slide.src=eval("image"+step+".src")
-whichimage=step
-if (step<3)
-step++
-else
-step=1
-setTimeout("slideit()",4000)
-}
-slideit()
-function slidelink(){
-if (whichimage==1)
-window.location="link1.htm"
-else if (whichimage==2)
-window.location="link2.htm"
-else if (whichimage==3)
-window.location="link3.htm"
-}
-//-->
-</script>
+						<div>
+							<a href="javascript:slidelink()">
+                            <img src="images/singtelchart.jpg" name="slide" border="0" width="600" height="400" /></a>
+							<script type="text/javascript">
+							var step=1
+							var whichimage=1
+							function slideit(){
+							if (!document.images)
+								return
+								document.images.slide.src=eval("image"+step+".src")
+								whichimage=step
+								if (step<3)
+									step++
+								else
+									step=1
+									setTimeout("slideit()",4000)
+							}
+							slideit()
+							function slidelink(){
+							if (whichimage==1)
+								window.location="link1.htm"
+							else if (whichimage==2)
+								window.location="link2.htm"
+							else if (whichimage==3)
+								window.location="link3.htm"
+							}
+							</script>
 						</div>
-						<p>
-							
-						</p>
-					    </div>
+					</div>
+					
 					<div class="section">
 						<h3>Videos</h3>
 						<ul>
 							<li>
-								<span>Video</span> <a href="programs.html"><img src="images/singtelsummary.jpg" alt=""></a>
+								<span>Video</span> <img src="images/singtelsummary.jpg" alt="">
 							</li>
 						</ul>
 					</div>
@@ -141,6 +136,7 @@ window.location="link3.htm"
 				</div>
 			</div>
 		</div>
+		
 		<div class="footer">
 			<div class="about">
 				<h3>About</h3>
@@ -150,11 +146,12 @@ window.location="link3.htm"
 					</p>
 				</div>
 			</div>
+			
 			<div class="contact">
 				<h3>Contact</h3>
 				<ul>
 					<li>
-						<span>Location :</span
+						<span>Location :</span>
 						<p>
 							&nbsp;Temasek Polytechnic
 						</p>
@@ -173,9 +170,11 @@ window.location="link3.htm"
 					</li>
 				</ul>
 			</div>
+			
 			<div class="connect">
-				<a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="https://www.facebook.com/tradingwithfriends/" id="facebook">facebook</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a>
+				<a href="https://twitter.com/tradingwfriends/" id="twitter">twitter</a> <a href="https://www.facebook.com/tradingwithfriends/" id="facebook">facebook</a>
 			</div>
+			
 			<p class="footnote">
 				&#169; Copyright 2013. All rights reserved
 			</p>
