@@ -9,12 +9,6 @@ a {
 }
 a img {
 	border-style: none;
-    border-color: inherit;
-    border-width: 0;
-    display:block;
-    height: 61px;
-    width: 64px;
-    margin-bottom: 0px;
 }
 .page {
 	width:960px;
