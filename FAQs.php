@@ -93,7 +93,7 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Trading with Friends - Learning Platform For You - FAQs</title>
+	<title>Trading With Friends - Learning Platform For You - FAQs</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
