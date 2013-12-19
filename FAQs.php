@@ -43,10 +43,10 @@
 				$message = $message . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
 				$message = $message . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
 
-				$message = $message . "\t\t" . '<ol>' . "\n"
+				$message = $message . "\t\t" . '<ol>' . "\n";
 										
 				// for error validation
-		} else if ($haveErrors && $userArriveBySubmittingAForm) {
+		} elseif ($haveErrors && $userArriveBySubmittingAForm) {
 				// $newTitle for Registration fail!
 				$newTitle = 'Error! Validation failed!!';
 				
