@@ -16,11 +16,6 @@
 		color: #000000;
 		}
 	</style>
-<style type="text/css">
-.highlighted {
-     background-color:yellow;
-}
-</style>
 
 	<script src="https://www.google.com/jsapi/" type="text/javascript"></script>
 	<script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"type="text/javascript"></script>
@@ -53,6 +48,53 @@
 		var image4=new Image()
 		image4.src="images/singtelsummary.jpg" //Visit ... Now!! Free to play!!	
 	</script>
+	<script language="JavaScript">
+
+var nbSearch=0;
+
+function findInPage(str) {
+  var txt, i, found;
+  if (str=="") return false;
+
+  if ((document.layers)||(window.sidebar)) {
+    if (!window.find(str)) {
+	  alert("End of page.\n"+'"'+str+'" finded '+nbSearch+" times.");
+	  while(window.find(str, false, true)) {nbSearch++;}
+	} 
+    else
+      nbSearch++;
+    if (nbSearch == 0)
+      alert('"'+str+'" is not found');
+  }
+
+  if (document.all) {
+    txt = window.document.body.createTextRange();
+    for (i = 0; i <= nbSearch && (found = txt.findText(str)) != false; i++) {
+      txt.moveStart("character", 1);
+      txt.moveEnd("textedit");
+    }
+    if (found) {
+      txt.moveStart("character", -1);
+      txt.findText(str);
+      txt.select();
+      txt.scrollIntoView();
+      nbSearch++;
+    } else {
+      if (nbSearch > 0) {
+	  	  alert("End of page.\n"+'"'+str+'" finded '+nbSearch+" times.");
+
+        nbSearch = 0;
+        findInPage(str);
+      } else { 
+	    alert('"'+str+'"  is not found');
+	  }
+    }
+  }
+
+  return false;
+}
+
+</script>
 </head>
 <body>
 	<div class="page">
@@ -80,44 +122,11 @@
 			</ul>
 		</div>
 
-		<div class="search">
-		<input type="text" name="search-term" id="search-term" />
-<input type="submit" name="search-button" id="search-button" value="search" />
- 
-<div id="bodyContainer">
-This is where the text is.
-</div>
-		</div>
-		<script>
-		$(document).ready(function() {
-    $('#search-button').on("click",function() {
-        if(!searchAndHighlight($('#search-term').val())) {
-            alert("No results found");
-        }
-    });
-});
-		</script>
-		<script>
-		function searchAndHighlight(searchTerm, selector) {
-    if(searchTerm) {
-        //var wholeWordOnly = new RegExp("\\g"+searchTerm+"\\g","ig"); //matches whole word only
-        //var anyCharacter = new RegExp("\\g["+searchTerm+"]\\g","ig"); //matches any word with any of search chars characters
-        var selector = selector || "body";                             //default selector is body if none provided
-        var searchTermRegEx = new RegExp(searchTerm,"ig");
-        var matches = $(selector).text().match(searchTermRegEx);
-        if(matches) {
-            $('.highlighted').removeClass('highlighted');     //Remove old search highlights
-            $(selector).html($(selector).html()
-                    .replace(searchTermRegEx, "<span class='highlighted'>"+searchTerm+"</span>"));
-            if($('.highlighted:first').length) {             //if match found, scroll to where the first one appears
-                $(window).scrollTop($('.highlighted:first').position().top);
-            }
-            return true;
-        }
-    }
-    return false;
-}
-		</script>
+		<form name="search" onSubmit="return findInPage(this.keyword.value);">
+<input name="keyword" type="text" size=30 onFocus="nbSearch=0; if (this.value=='Keywords') {this.value=''}" value="">
+<input type="submit" value="Search">
+</form>
+
 		
 		<div class="body">
 			<div class="home">
