@@ -259,7 +259,7 @@ function findInPage(str) {
 				</div>
 				<div>
 					<h4>Send a message</h4>
-					<form action="index.html" method="post">
+					<form action="FAQs.php" method="post">
 					<?php echo $message; ?>
 					<?php ?>
 					<?php if ($haveErrors || $userArriveByClickingOrDirectlyTypeURL) : ?>
