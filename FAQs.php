@@ -259,18 +259,24 @@ function findInPage(str) {
 				</div>
 				<div>
 					<h4>Send a message</h4>
-					<form action="index.html">
+					<form action="index.html" method="post">
+					<?php echo $message; ?>
+					<?php ?>
+					<?php if ($haveErrors || $userArriveByClickingOrDirectlyTypeURL) : ?>
 						<div>
-							<label for="name">Name</label>
-							<input type="text" id="name">
-							<label for="surname">Surname</label>
-							<input type="text" id="surname">
-							<label for="email">Email address</label>
-							<input type="text" id="email">
+							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
+							<font color="red"><?php echo $nameError; ?></font>
+						
+							<b>Surname:</b> <input type="text" name="surname" size="20" maxlength="40" value="<?php echo $surname; ?>">
+							<font color="red"><?php echo $surnameError; ?></font>
+							
+							<b>Email address:</b> <input type="text" name="email" size="20" maxlength="40" value="<?php echo $email; ?>">
+							<font color="red"><?php echo $emailError; ?></font>
+
 						</div>
 						<div>
-							<label for="message">Message</label>
-							<textarea name="message" id="message" cols="30" rows="10"></textarea>
+							<b>Message:</b> <input type="text" name="message" size="20" maxlength="40" value="<?php echo $message; ?>">
+							<font color="red"><?php echo $messageError; ?></font>
 							<input type="submit" id="submit" value="Send message">
 						</div>
 					</form>
