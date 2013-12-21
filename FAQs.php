@@ -12,7 +12,7 @@
 		$messgaeError = '';
 		
 		// Set default message
-		$message = '';
+		$message1 = '';
 		
 		// Set array of errors
 		$errors = array();
@@ -29,27 +29,27 @@
 		// for successful POST
 		if ($noErrors && $userArriveBySubmittingAForm) {
 				
-				$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+				$message1 = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
 				
-				$message = $message . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
-				$message = $message . "\t\t" . 'Surname : ' . $surname . ' <br />' . "\n";
-				$message = $message . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
-				$message = $message . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
+				$message1 = $message1 . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
+				$message1 = $message1 . "\t\t" . 'Surname : ' . $surname . ' <br />' . "\n";
+				$message1 = $message1 . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
+				$message1 = $message1 . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
 
-				$message = $message . "\t\t" . '<ol>' . "\n";
+				$message1 = $message1 . "\t\t" . '<ol>' . "\n";
 										
 				// for error validation
 		} elseif ($haveErrors && $userArriveBySubmittingAForm) {
 			
-				$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
-				$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
+				$message1 = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+				$message1 = $message1 . "\t\t" . 'Validation errors : <br />' . "\n";
 				
-				$message = $message . "\t\t" . '<ol>' . "\n";
+				$message1 = $message1 . "\t\t" . '<ol>' . "\n";
 				
 				
 				
 				foreach ($errors as $key=>$errorMessage) {
-				$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+				$message1 = $message1 . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
 				
 				if ($key == 'name') {
 						$nameError = $errorMessage;
@@ -66,12 +66,12 @@
 				
 				}
 				
-				$message = $message . "\t\t" . '</ol>' . "\n";
+				$message1 = $message1 . "\t\t" . '</ol>' . "\n";
 				
 				// for displaying form
 		} else if ($userArriveByClickingOrDirectlyTypeURL) { // we put the original form inside the $message variable
 				
-				$message = '';
+				$message1 = '';
 		}
 
 ?>
@@ -244,9 +244,9 @@ function findInPage(str) {
 					</div>	
 				</div>
 				<div>
-					<h4>Send a message</h4>
+					<h4>Send a Feedback/Ask a Question</h4>
 					<form action="FAQs.php" method="post">
-					<?php echo $message; ?>
+					<?php echo $message1; ?>
 						<div>
 							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
 							<font color="red"><?php echo $nameError; ?></font>
