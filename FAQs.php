@@ -29,12 +29,6 @@
 		// for successful POST
 		if ($noErrors && $userArriveBySubmittingAForm) {
 				
-				// $newTitle for successful
-				$newTitle = 'Submission Successfully!!';
-				
-				// $h1Title for Thank you for registering with us!
-				$h1Title = 'Thank you for your contributions!';
-				
 				$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
 				
 				$message = $message . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
@@ -46,11 +40,6 @@
 										
 				// for error validation
 		} elseif ($haveErrors && $userArriveBySubmittingAForm) {
-				// $newTitle for Registration fail!
-				$newTitle = 'Error! Validation failed!!';
-				
-				// $h1Title for Registration fail!
-				$h1Title = 'Fail!';
 			
 				$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
 				$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
@@ -81,9 +70,6 @@
 				
 				// for displaying form
 		} else if ($userArriveByClickingOrDirectlyTypeURL) { // we put the original form inside the $message variable
-				$newTitle = 'Registration';
-				
-				$h1Title = 'Welcome to Trading with Friends';
 				
 				$message = '';
 		}
@@ -261,8 +247,6 @@ function findInPage(str) {
 					<h4>Send a message</h4>
 					<form action="FAQs.php" method="post">
 					<?php echo $message; ?>
-					<?php ?>
-					<?php if ($haveErrors || $userArriveByClickingOrDirectlyTypeURL) : ?>
 						<div>
 							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
 							<font color="red"><?php echo $nameError; ?></font>
