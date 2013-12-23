@@ -261,7 +261,7 @@ function findInPage(str) {
 						<div>
 							<b>Message:</b> <input type="text" name="message" size="20" maxlength="40" value="<?php echo $message; ?>">
 							<font color="red"><?php echo $messageError; ?></font>
-							<input type="submit" id="submit" value="Send message">
+							<input type="submit" id="submit" value="Send message" a href="mailto:contactus@twf.com.sg">
 						</div>
 					</form>
 				</div>
