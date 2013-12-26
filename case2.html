@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<title>Trading With Friends - Learning Platform For You - Case Study</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script type="text/javascript" src="sidebar.js"></script>
+    <script type="text/javascript" src="mootools.js"></script>
 			<script language="JavaScript">
 
 var nbSearch=0;
@@ -77,10 +79,12 @@ function findInPage(str) {
 				</li>
 			</ul>
 		</div>
-						<form name="search" onSubmit="return findInPage(this.keyword.value);">
-<input name="keyword" type="text" size=30 onFocus="nbSearch=0; if (this.value=='Keywords') {this.value=''}" value="">
-<input type="submit" value="Search">
-</form>
+		<div id="content" class="sidebox">
+		    <form name="search" onSubmit="return findInPage(this.keyword.value);"><br>
+                <input name="keyword" type="text" size=25 onFocus="nbSearch=0; if (this.value=='Keywords') {this.value=''}" value="">
+                <input type="submit" value="Search">
+            </form>
+        </div>
 		<div class="body">
 			<div class="case2">
 				<ul>

@@ -938,6 +938,29 @@ p a:hover {
 	letter-spacing:.075em;
 	line-height:37px;
 }
+body {
+	background: url(bkgd.png) 3px 0 repeat-x;
+	background-color: #3f5dce;
+	background-position: top;
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#content {
+	position:absolute;
+	right: 250px;
+	top: 100px;
+	width: 140px;
+	padding: 0 40px 13px 10px;
+	font-size: small;
+	color: #FFFFFF;
+}
+
+.sidebox {
+	background: #7e7e7e url(logo-small.png) no-repeat left bottom;
+}
+
 /*------------------------- Footer ------------------------*/
 .footer {
 	overflow:hidden;
@@ -1091,3 +1114,4 @@ p a:hover {
 .footer .about div p a:hover, .footer .contact ul li p a:hover {
 	color:#ec7500;
 }
+
