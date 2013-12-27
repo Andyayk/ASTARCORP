@@ -259,7 +259,7 @@ function findInPage(str) {
 					
 						</div>
 						<div>
-							<b>Message:</b> <input type="text" name="message" size="20" maxlength="40" value="<?php echo $message; ?>">
+							<b>Message:</b> <input type="text" name="message" size="100" maxlength="150" value="<?php echo $message; ?>">
 							<font color="red"><?php echo $messageError; ?></font>
 							<input type="submit" id="submit" value="Send message" a href="mailto:contactus@twf.com.sg">
 							
