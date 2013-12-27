@@ -154,11 +154,12 @@ function findInPage(str) {
 				</li>
 			</ul>
 		</div>
-		
-					<form name="search" onSubmit="return findInPage(this.keyword.value);">
-<input name="keyword" type="text" size=30 onFocus="nbSearch=0; if (this.value=='Keywords') {this.value=''}" value="">
-<input type="submit" value="Search">
-</form>
+			<div style="position:fixed; right:0; top:0;">
+		    <form name="search" onSubmit="return findInPage(this.keyword.value);"><br>
+                <input name="keyword" type="text" size=25 onFocus="nbSearch=0; if (this.value=='Keywords') {this.value=''}" value="">
+                <input type="submit" value="Search">
+            </form>
+        </div>
 		
 		<div class="body">
 			<div class="contact">
