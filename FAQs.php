@@ -36,12 +36,11 @@
 		$message = $message . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
 		$message = $message . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
 	
-		$to = 'corepbl@hotmail.com';
+		$to = 'andy_ang94@hotmail.com';
 		$subject = 'Send a Feedback/Ask a Question';
 		$emailmessage = $usermessage;
-		$headers = 'From: webmaster@example.com' . "\r\n" .
-    	'Reply-To: webmaster@example.com' . "\r\n" .
-   		'X-Mailer: PHP/' . phpversion();
+		$from = $email;
+		$headers = 'From:' . $from;
 
 		mail($to, $subject, $emailmessage, $headers);
 									
