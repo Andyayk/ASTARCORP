@@ -34,11 +34,10 @@
 	
 		$to = 'andy_ang94@hotmail.com';
 		$subject = 'Send a Feedback/Ask a Question';
-		$emailmessage = $message;
 		$from = $email;
 		$headers = 'From:' . $from;
 
-		mail($to, $subject, $emailmessage, $headers);
+		mail($to, $subject, $message, $headers);
 									
 	// for error validation
 	} elseif ($haveErrors && $userArriveBySubmittingAForm) {
@@ -50,7 +49,7 @@
 				
 		foreach ($errors as $key=>$errorMessage) {
 		
-			$messages = $messages . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			$messages = $messages . "\t\t\t" . '<li>' . '<font color="red">'  . $errorMessage . '</font>' . '</li>' ."\n";
 				
 			if ($key == 'name') {
 				$nameError = $errorMessage;
@@ -247,13 +246,13 @@ function findInPage(str) {
 					<?php echo $messages; ?>
 						<div>
 							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
-							<font color="red"><?php echo $nameError; ?></font>
+							<font color="red"><?php echo $nameError; ?></font></br>
 						
 							<b>Email address:</b> <input type="text" name="email" size="20" maxlength="40" value="<?php echo $email; ?>">
-							<font color="red"><?php echo $emailError; ?></font>
+							<font color="red"><?php echo $emailError; ?></font></br>
 					
 							<b>Message:</b> <input type="text" name="message" size="100" maxlength="150" value="<?php echo $message; ?>">
-							<font color="red"><?php echo $messageError; ?></font>
+							<font color="red"><?php echo $messageError; ?></font></br>
 						</div>
 						<div>
 							<input type="submit" id="submit" value="Send Message">
