@@ -1,17 +1,15 @@
 <?php
 
 	$name = '';
-	$surname = '';
 	$email = '';
 	$message = '';
 		
-	// Error usermessages
+	// Error messages
 	$nameError = '';
-	$surnameError = '';
 	$emailError = '';
 	$messageError = '';
 		
-	// Set default usermessage
+	// Set default message
 	$message = '';
 		
 	// Set array of errors
@@ -23,7 +21,6 @@
 	// haveErrors is the opposite of noErrors
 	$haveErrors = !$noErrors;
 		
-	// use require_once to include the validations/registerformresult.php
 	require_once('validations/faqresult.php');
 		
 	// for successful POST
@@ -31,8 +28,7 @@
 				
 		$messages = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
 				
-		$messages = $messages . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
-		$messages = $messages . "\t\t" . 'Surname : ' . $surname . ' <br />' . "\n";			
+		$messages = $messages . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";			
 		$messages = $messages . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
 		$messages = $messages . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
 	
@@ -59,9 +55,6 @@
 			if ($key == 'name') {
 				$nameError = $errorMessage;
 			}
-			if ($key == 'surname') {
-				$surnameError = $errorMessage;
-			}
 			if ($key == 'email') {
 				$emailError = $errorMessage;
 			}
@@ -74,7 +67,7 @@
 			$messages = $messages . "\t\t" . '</ol>' . "\n";
 				
 		// for displaying form
-		} else if ($userArriveByClickingOrDirectlyTypeURL) { // we put the original form inside the $usermessage variable	
+		} else if ($userArriveByClickingOrDirectlyTypeURL) {
 			$messages = '';
 		}
 
@@ -251,23 +244,19 @@ function findInPage(str) {
 				<div>
 					<h4>Send a Feedback/Ask a Question</h4>
 					<form method="post">
-					<?php echo $message; ?>
+					<?php echo $messages; ?>
 						<div>
 							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
 							<font color="red"><?php echo $nameError; ?></font>
 						
-							<b>Surname:</b> <input type="text" name="surname" size="20" maxlength="40" value="<?php echo $surname; ?>">
-							<font color="red"><?php echo $surnameError; ?></font>
-							
 							<b>Email address:</b> <input type="text" name="email" size="20" maxlength="40" value="<?php echo $email; ?>">
 							<font color="red"><?php echo $emailError; ?></font>
 					
-						</div>
-						<div>
 							<b>Message:</b> <input type="text" name="message" size="100" maxlength="150" value="<?php echo $message; ?>">
 							<font color="red"><?php echo $messageError; ?></font>
+						</div>
+						<div>
 							<input type="submit" id="submit" value="Send Message">
-							
 						</div>
 					</form>
 				</div>
