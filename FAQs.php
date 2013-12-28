@@ -3,16 +3,16 @@
 	$name = '';
 	$surname = '';
 	$email = '';
-	$message = '';
+	$usermessage = '';
 		
-	// Error messages
+	// Error usermessages
 	$nameError = '';
 	$surnameError = '';
 	$emailError = '';
-	$messageError = '';
+	$usermessageError = '';
 		
-	// Set default message
-	$errormessage = '';
+	// Set default usermessage
+	$message = '';
 		
 	// Set array of errors
 	$errors = array();
@@ -29,47 +29,54 @@
 	// for successful POST
 	if ($noErrors && $userArriveBySubmittingAForm) {
 				
+		$message = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+				
+		$message = $message . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Surname : ' . $surname . ' <br />' . "\n";			
+		$message = $message . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
+		$message = $message . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
+	
 		$to = 'corepbl@hotmail.com';
 		$subject = 'Send a Feedback/Ask a Question';
-		$emailmessage = $message;
+		$emailmessage = $usermessage;
 		$headers = 'From: webmaster@example.com' . "\r\n" .
     	'Reply-To: webmaster@example.com' . "\r\n" .
    		'X-Mailer: PHP/' . phpversion();
 
 		mail($to, $subject, $emailmessage, $headers);
 									
-		// for error validation
+	// for error validation
 	} elseif ($haveErrors && $userArriveBySubmittingAForm) {
 			
-		$errormessage = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
-		$errormessage = $errormessage . "\t\t" . 'Validation errors : <br />' . "\n";
+		$message = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+		$message = $message . "\t\t" . 'Validation errors : <br />' . "\n";
 				
-		$errormessage = $errormessage . "\t\t" . '<ol>' . "\n";
+		$message = $message . "\t\t" . '<ol>' . "\n";
 				
 		foreach ($errors as $key=>$errorMessage) {
 		
-			$errormessage = $errormessage . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
+			$message = $message . "\t\t\t" . '<li>' . $errorMessage . '</li>' . "\n";
 				
 			if ($key == 'name') {
-					$nameError = $errorMessage;
+				$nameError = $errorMessage;
 			}
 			if ($key == 'surname') {
-					$surnameError = $errorMessage;
+				$surnameError = $errorMessage;
 			}
 			if ($key == 'email') {
-					$emailError = $errorMessage;
+				$emailError = $errorMessage;
 			}
-			if ($key == 'message') {
-					$messageError = $errorMessage;
+			if ($key == 'usermessage') {
+				$usermessageError = $errorMessage;
 			}
 				
 		}
 				
-			$errormessage = $errormessage . "\t\t" . '</ol>' . "\n";
+			$message = $message . "\t\t" . '</ol>' . "\n";
 				
 		// for displaying form
-		} else if ($userArriveByClickingOrDirectlyTypeURL) { // we put the original form inside the $message variable	
-			$errormessage = '';
+		} else if ($userArriveByClickingOrDirectlyTypeURL) { // we put the original form inside the $usermessage variable	
+			$message = '';
 		}
 
 ?>
@@ -245,7 +252,7 @@ function findInPage(str) {
 				<div>
 					<h4>Send a Feedback/Ask a Question</h4>
 					<form method="post">
-					<?php echo $errormessage; ?>
+					<?php echo $message; ?>
 						<div>
 							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
 							<font color="red"><?php echo $nameError; ?></font>
@@ -258,9 +265,9 @@ function findInPage(str) {
 					
 						</div>
 						<div>
-							<b>Message:</b> <input type="text" name="message" size="100" maxlength="150" value="<?php echo $message; ?>">
-							<font color="red"><?php echo $messageError; ?></font>
-							<input type="submit" id="submit" value="Send message" a href="mailto:contactus@twf.com.sg">
+							<b>Message:</b> <input type="text" name="usermessage" size="100" maxlength="150" value="<?php echo $usermessage; ?>">
+							<font color="red"><?php echo $usermessageError; ?></font>
+							<input type="submit" id="submit" value="Send Message">
 							
 						</div>
 					</form>
