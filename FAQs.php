@@ -35,7 +35,7 @@
 		$to = 'andy_ang94@hotmail.com';
 		$subject = 'Send a Feedback/Ask a Question';
 		$from = $email;
-		$headers = 'From:' . $from;
+		$headers = 'From:' . $from . "\r\n";
 
 		mail($to, $subject, $message, $headers);
 									
