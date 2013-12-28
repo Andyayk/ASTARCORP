@@ -246,7 +246,7 @@ function findInPage(str) {
 				</div>
 				<div>
 					<h4>Send a Feedback/Ask a Question</h4>
-					<form action="MAILTO:corepbl@hotmail.com" method="post" enctype="text/plain">
+					<form method="post">
 					<?php echo $message1; ?>
 						<div>
 							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
