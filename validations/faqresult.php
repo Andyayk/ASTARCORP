@@ -23,7 +23,7 @@
 		$messageNotGiven = empty($_POST['message']);
 				
 		if ($messageNotGiven) {
-			$errors['message'] = "message is required";
+			$errors['message'] = "Message is required";
 		} 
 				
 		$noErrors = (count($errors) == 0);
