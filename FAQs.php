@@ -43,6 +43,8 @@
 	} elseif ($haveErrors && $userArriveBySubmittingAForm) {
 			
 		$messages = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+		
+		$messages = $messages . "\t\t" . '<ol>' . "\n";
 				
 		foreach ($errors as $key=>$errorMessage) {
 		
