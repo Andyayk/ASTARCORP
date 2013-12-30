@@ -27,13 +27,8 @@
 	if ($noErrors && $userArriveBySubmittingAForm) {
 				
 		$messages = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-	
-		$to = 'andy_ang94@hotmail.com';
-		$subject = 'Send a Feedback/Ask a Question';
-		$from = $email;
-		$headers = 'From:' . $from . "\r\n";
 
-		mail($to, $subject, $message, $headers);
+		mail("andy_ang94@hotmail.com", "a", "a", "a");
 									
 	// for error validation
 	} elseif ($haveErrors && $userArriveBySubmittingAForm) {
