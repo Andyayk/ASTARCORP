@@ -1,46 +1,3 @@
-<?php
-
-	$name = '';
-	$email = '';
-	$message = '';
-		
-	// Error messages
-	$nameError = '';
-	$emailError = '';
-	$messageError = '';
-		
-	// Set default message
-	$message = '';
-		
-	// Set array of errors
-	$errors = array();
-		
-	// Set default that there is no errors
-	$noErrors = true;
-		
-	// haveErrors is the opposite of noErrors
-	$haveErrors = !$noErrors;
-		
-	require_once('validations/faqresult.php');
-		
-	// for successful POST
-	if ($noErrors && $userArriveBySubmittingAForm) {
-				
-		$messages = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-
-		mail("andy_ang94@hotmail.com", "a", "a", "a");
-									
-	// for error validation
-	} elseif ($haveErrors && $userArriveBySubmittingAForm) {
-			
-		$messages = "\t\t" . '<font color="red">Failure!</font><br />' . "\n";
-		
-		// for displaying form
-		} else if ($userArriveByClickingOrDirectlyTypeURL) {
-			$messages = '';
-		}
-
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -212,20 +169,19 @@ function findInPage(str) {
 				</div>
 				<div>
 					<h4>Send a Feedback/Ask a Question</h4>
-					<form method="post">
-					<?php echo $messages; ?>
+					<form action="MAILTO:corepbl@hotmail.com" method="post" enctype="text/plain">
 						<div>
-							<b>Name:</b> <input type="text" name="name" size="20" maxlength="40" value="<?php echo $name; ?>">
-							<font color="red"><?php echo $nameError; ?></font></br>
-						
-							<b>Email address:</b> <input type="text" name="email" size="20" maxlength="40" value="<?php echo $email; ?>">
-							<font color="red"><?php echo $emailError; ?></font></br>
-					
-							<b>Message:</b> <input type="text" name="message" size="100" maxlength="150" value="<?php echo $message; ?>">
-							<font color="red"><?php echo $messageError; ?></font></br>
+							<label for="name">Name</label>
+							<input type="text" id="name">
+							<label for="surname">Surname</label>
+							<input type="text" id="surname">
+							<label for="email">Email address</label>
+							<input type="text" id="email">
 						</div>
 						<div>
-							<input type="submit" id="submit" value="Send Message">
+							<label for="message">Message</label>
+							<textarea name="message" id="message" cols="30" rows="10"></textarea>
+							<input type="submit" id="submit" value="Send message">
 						</div>
 					</form>
 				</div>
