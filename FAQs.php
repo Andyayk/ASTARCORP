@@ -27,10 +27,6 @@
 	if ($noErrors && $userArriveBySubmittingAForm) {
 				
 		$messages = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
-				
-		$messages = $messages . "\t\t" . 'Name : ' . $name . ' <br />' . "\n";			
-		$messages = $messages . "\t\t" . 'Email : ' . $email . ' <br />' . "\n";
-		$messages = $messages . "\t\t" . 'Message : ' . $message . ' <br />' . "\n";
 	
 		$to = 'andy_ang94@hotmail.com';
 		$subject = 'Send a Feedback/Ask a Question';
@@ -42,28 +38,8 @@
 	// for error validation
 	} elseif ($haveErrors && $userArriveBySubmittingAForm) {
 			
-		$messages = "\t\t" . '<font color="red">Fail!</font><br />' . "\n";
+		$messages = "\t\t" . '<font color="red">Failure!</font><br />' . "\n";
 		
-		$messages = $messages . "\t\t" . '<ol>' . "\n";
-				
-		foreach ($errors as $key=>$errorMessage) {
-		
-			$messages = $messages . "\t\t\t" . '<li>' . '<font color="red">'  . $errorMessage . '</font>' . '</li>' ."\n";
-				
-			if ($key == 'name') {
-				$nameError = $errorMessage;
-			}
-			if ($key == 'email') {
-				$emailError = $errorMessage;
-			}
-			if ($key == 'message') {
-				$messageError = $errorMessage;
-			}
-				
-		}
-				
-			$messages = $messages . "\t\t" . '</ol>' . "\n";
-				
 		// for displaying form
 		} else if ($userArriveByClickingOrDirectlyTypeURL) {
 			$messages = '';
