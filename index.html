@@ -133,12 +133,11 @@ function findInPage(str) {
 			<div class="home">
 				<div class="content">
 					<div class="featured">
-						<div>
-                            <img src="images/play.jpg" name="slide" border="0" width="600" height="400" /></a>
-							<script type="text/javascript">
-							var step=1
-							var whichimage=1
-							function slideit(){
+                    	<img src="images/play.jpg" name="slide" border="0" width="600" height="400" /></a>
+						<script type="text/javascript">
+						var step=1
+						var whichimage=1
+						function slideit(){
 							if (!document.images)
 								return
 								document.images.slide.src=eval("image"+step+".src")
@@ -149,8 +148,8 @@ function findInPage(str) {
 									step=1
 									setTimeout("slideit()",5000)
 							}
-							slideit()
-							function slidelink(){
+						slideit()
+						function slidelink(){
 							if (whichimage==1)
 								window.location="link1.htm"
 							else if (whichimage==2)
@@ -159,9 +158,8 @@ function findInPage(str) {
 								window.location="link3.htm"
 							else if (whichimage==4)
 								window.location="link4.htm"
-							}
-							</script>
-						</div>
+						}
+						</script>
 					</div>
 					
 					<div class="section">
