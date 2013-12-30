@@ -27,6 +27,12 @@
 	if ($noErrors && $userArriveBySubmittingAForm) {
 				
 		$messages = "\t\t" . '<font color="green">Success!</font><br />' . "\n";
+		
+		<a href="mailto:manish@simplygraphix.com?subject=Feedback for 
+webdevelopersnotes.com&body=The Tips and Tricks section is great
+&cc=anotheremailaddress@anotherdomain.com
+&bcc=onemore@anotherdomain.com">Send me an email</a>
+		
 	
 		$to = 'andy_ang94@hotmail.com';
 		$subject = 'Send a Feedback/Ask a Question';
