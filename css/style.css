@@ -634,13 +634,13 @@ p a:hover {
 	text-align:center;
 	width:130px;
 }
-.body .home, .body .about, .body .analysis, .body , .body , .body , .body , .body .voice-lesson, .body .blog-single {
+.body .home, .body .about, .body .analysis, .body , .body , .body , .body , .body .voice-lesson, .body  {
 	overflow:hidden;
 }
 .body .home .content .featured div p:first-child a, .body .home .content .featured div p a {
 	color:#fff;
 }
-.body .home .content .featured p a, .body .blog .section:first-child div div h3 a, .body .blog-single div:first-child div h3 a, .body .blog-single div div:first-child ul li h3 a {
+.body .home .content .featured p a, .body  .section:first-child div div h3 a, .body  div:first-child div h3 a, .body  div div:first-child ul li h3 a {
 	color:#444;
 }
 .body .home .content .featured p a:hover, .body .about div div p a:hover, .body .about div.sidebar ul:first-child li:hover span a, .body .about div.sidebar div ul li h2 a:hover, .body .analysis ul li.selected a, .body .analysis ul li a:hover, .body .analysis ul li:hover a, .body  ul li.selected a, .body  ul li a:hover, .body  ul li:hover a, .body  ul li.selected a, .body  ul li a:hover, .body  ul li:hover a, .body  ul li.selected a, .body  ul li a:hover, .body  ul li:hover a, .body  ul li.selected a, .body  ul li a:hover, .body  ul li:hover a, .body .voice-lesson ul li.selected a, .body .voice-lesson ul li a:hover, .body .voice-lesson ul li:hover a, .body .contact div:first-child div:first-child p a:hover {
@@ -649,7 +649,7 @@ p a:hover {
 .body  ul li:first-child:hover, .body .analysis ul li:first-child:hover, .body .analysis ul li:first-child.selected, .body  ul li:first-child:hover, .body  ul li:first-child:hover, .body  ul li:first-child:hover, .body .voice-lesson ul li:first-child:hover {
 	border-radius:10px 10px 0 0;
 }
-.body .home .content .section ul li a:first-child:hover, .body .blog-single div:first-child div.navigation a:hover, .body .blog-single div div:first-child div.nav a:hover {
+.body .home .content .section ul li a:first-child:hover, .body  div:first-child div.navigation a:hover, .body  div div:first-child div.nav a:hover {
 	text-decoration:underline;
 }
 .body .home .content .section ul li a img, .body .analysis .content div:first-child a img, .body  .content div:first-child a img, .body  .content div:first-child a img, .body  .content div:first-child a img, .body  .content div:first-child a img, .body .voice-lesson .content div:first-child a img {
@@ -673,17 +673,17 @@ p a:hover {
 	color:#ff8b00;
 	text-decoration:none;
 }
-.body .about div div:first-child, .body .analysis ul li:first-child, .body  ul li:first-child, .body  ul li:first-child, .body  ul li:first-child, .body  ul li:first-child, .body .voice-lesson ul li:first-child, .body .blog .section div:first-child div ul:first-child {
+.body .about div div:first-child, .body .analysis ul li:first-child, .body  ul li:first-child, .body  ul li:first-child, .body  ul li:first-child, .body  ul li:first-child, .body .voice-lesson ul li:first-child, .body  .section div:first-child div ul:first-child {
 	border:0;
 	border-radius:10px 10px 0 0;
 }
 .body .about div.sidebar ul:first-child li span, .body .about div.sidebar ul:first-child li a, .body .contact div:first-child div ul.first {
 	float:left;
 }
-.body .about div.sidebar div ul li:first-child, .body .blog .section div:first-child div ul li:first-child, .body .blog .section div ul li:first-child, .body .blog-single div ul li:first-child, .body .contact div:first-child ul.section li:first-child {
+.body .about div.sidebar div ul li:first-child, .body  .section div:first-child div ul li:first-child, .body  .section div ul li:first-child, .body  div ul li:first-child, .body .contact div:first-child ul.section li:first-child {
 	border:0;
 }
-.body .about div.sidebar div ul li span, .body .blog-single div div:first-child ul li span {
+.body .about div.sidebar div ul li span, .body  div div:first-child ul li span {
 	border-bottom:2px solid #FF8B00;
 	color:#6B7073;
 	display:inline;
@@ -810,7 +810,7 @@ p a:hover {
 	text-align:justify;
 	text-transform:uppercase;
 }
-.body .analysis .content div.section div span, .body .analysis .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body .voice-lesson .content div.section div span, .body .voice-lesson .content div.section div p, .body .blog-single div:first-child div p {
+.body .analysis .content div.section div span, .body .analysis .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body  .content div.section div span, .body  .content div.section div p, .body .voice-lesson .content div.section div span, .body .voice-lesson .content div.section div p, .body  div:first-child div p {
 	color:#6B7073;
 	font-size:16px;
 	letter-spacing:.05em;
@@ -818,13 +818,13 @@ p a:hover {
 	margin:0;
 	text-align:justify;
 }
-.body .analysis .content div.section div p a, .body  .content div.section div p a, .body  .content div.section div p a, .body  .content div.section div p a, .body  .content div.section div p a, .body .voice-lesson .content div.section div p a, .body .blog-single div:first-child div p a {
+.body .analysis .content div.section div p a, .body  .content div.section div p a, .body  .content div.section div p a, .body  .content div.section div p a, .body  .content div.section div p a, .body .voice-lesson .content div.section div p a, .body  div:first-child div p a {
 	margin:0;
 	float:none;
 	display:inline;
 	color:#6B7073;
 }
-.body .analysis .content div.section div p a:hover, .body  .content div.section div p a:hover, .body  .content div.section div p a:hover, .body  .content div.section div p a:hover, .body  .content div.section div p a:hover, .body .voice-lesson .content div.section div p a:hover, .body .blog-single div:first-child div p a:hover {
+.body .analysis .content div.section div p a:hover, .body  .content div.section div p a:hover, .body  .content div.section div p a:hover, .body  .content div.section div p a:hover, .body  .content div.section div p a:hover, .body .voice-lesson .content div.section div p a:hover, .body  div:first-child div p a:hover {
 	color: #FF8B00;
 }
 .body .analysis .content div, .body  .content div, .body  .content div, .body  .content div, .body  .content div, .body .voice-lesson .content div {
