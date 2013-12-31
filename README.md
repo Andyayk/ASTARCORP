@@ -1,7 +1,7 @@
-# Trading with Friends Facebook Application
+# Trading with Friends Website
 
-Authors: Andy Ang Yong Kiat, Tan Junwei
+Authors: Lee Jian Hua, Wu Ze Lin
 
 ## About
 
-We spent long hours working on this Facebook Application.
+Website for Trading with Friends
