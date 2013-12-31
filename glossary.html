@@ -4,53 +4,54 @@
 	<meta charset="UTF-8">
 	<title>Trading With Friends - Learning Platform For You - Glossary</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-			<script language="JavaScript">
-//search javascript
-var nbSearch=0;
+	
+	<script language="JavaScript">
+	//search javascript
+	var nbSearch=0;
 
-function findInPage(str) {
-  var txt, i, found;
-  if (str=="") return false;
+	function findInPage(str) {
+  	var txt, i, found;
+  	if (str=="") return false;
 
-  if ((document.layers)||(window.sidebar)) {
-    if (!window.find(str)) {
-	  alert("End of page.\n"+'"'+str+'" finded '+nbSearch+" times.");
-	  while(window.find(str, false, true)) {nbSearch++;}
-	} 
-    else
-      nbSearch++;
-    if (nbSearch == 0)
-      alert('"'+str+'" is not found');
-  }
+  	if ((document.layers)||(window.sidebar)) {
+    	if (!window.find(str)) {
+	  		alert("End of page.\n"+'"'+str+'" finded '+nbSearch+" times.");
+	  		while(window.find(str, false, true)) {nbSearch++;}
+		} 
+    	else
+   		nbSearch++;
+    	if (nbSearch == 0)
+    		alert('"'+str+'" is not found');
+  	}
 
-  if (document.all) {
-    txt = window.document.body.createTextRange();
-    for (i = 0; i <= nbSearch && (found = txt.findText(str)) != false; i++) {
-      txt.moveStart("character", 1);
-      txt.moveEnd("textedit");
-    }
-    if (found) {
-      txt.moveStart("character", -1);
-      txt.findText(str);
-      txt.select();
-      txt.scrollIntoView();
-      nbSearch++;
-    } else {
-      if (nbSearch > 0) {
-	  	  alert("End of page.\n"+'"'+str+'" finded '+nbSearch+" times.");
+  	if (document.all) {
+    	txt = window.document.body.createTextRange();
+    	for (i = 0; i <= nbSearch && (found = txt.findText(str)) != false; i++) {
+      		txt.moveStart("character", 1);
+      		txt.moveEnd("textedit");
+    	}
+    	if (found) {
+      		txt.moveStart("character", -1);
+      		txt.findText(str);
+      		txt.select();
+      		txt.scrollIntoView();
+      		nbSearch++;
+    	} else {
+      		if (nbSearch > 0) {
+	  			alert("End of page.\n"+'"'+str+'" finded '+nbSearch+" times.");
 
-        nbSearch = 0;
-        findInPage(str);
-      } else { 
-	    alert('"'+str+'"  is not found');
-	  }
-    }
-  }
+        		nbSearch = 0;
+        		findInPage(str);
+      		} else { 
+	    		alert('"'+str+'"  is not found');
+	  		}
+    	}
+  	}
 
-  return false;
-}
-
-</script>
+  	return false;
+  	
+	}
+	</script>
 </head>
 <body>
 	<div class="page">
